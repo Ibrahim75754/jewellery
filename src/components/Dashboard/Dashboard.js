@@ -27,6 +27,7 @@ import AddProduct from './AdminDashboard/AddProduct/AddProduct';
 import ManageAllProducts from './AdminDashboard/ManageAllProducts/ManageAllProducts';
 import AdminRoute from '../Login/AdminRoute/AdminRoute';
 import ProductsUpdate from './AdminDashboard/ManageAllProducts/ProductsUpdate';
+import './Dashboard.css';
 
 const drawerWidth = 250;
 
@@ -44,32 +45,39 @@ function Dashboard(props) {
     const drawer = (
         <div style={{ backgroundColor: "#653DF5", height: "100vh", color: "white" }}>
             <Toolbar >
-                <h1 className="text-bold d-inline" style={{ color: "white",marginTop:"30px" }}>Jewellery</h1>
+                <h1 className="text-bold d-inline" style={{ color: "white", marginTop: "30px" }}>Jewellery</h1>
             </Toolbar>
-            
-            <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-            <Link to="/home"><Button color="inherit" className="w-100 text-white text-decoration-none py-2 mb-2">Home</Button></Link>
+
+            <ListItem button className='mt-3'>
+                <Link to='/home' className='text-white text-decoration-none mb-2 w-100'>Home</Link>
+            </ListItem>
+
 
             {
                 admin ?
                     <Box>
-                        <Link to={`${url}/manageAllOrders`}><Button color="inherit" className="w-100 text-white text-decoration-none py-2 mb-2">Manage All Orders</Button></Link>
-                        <Link to={`${url}/addProduct`}><Button color="inherit" className="w-100 text-white text-decoration-none py-2 mb-2">Add Product</Button></Link>
-                        <Link to={`${url}/manageAllProducts`}><Button color="inherit" className="w-100 text-white text-decoration-none py-2 mb-2">Manage All Products</Button></Link>
-                        <Link to={`${url}/makeAdmin`}><Button color="inherit" className="w-100 text-white text-decoration-none py-2 mb-2">Make Admin</Button></Link>
+                        <ListItem button className=''>
+                            <Link to={`${url}/manageAllOrders`} className='text-white text-decoration-none mb-2 w-100'>Manage Orders</Link>
+                        </ListItem>
+                        <ListItem button className=''>
+                            <Link to={`${url}/addProduct`} className='text-white text-decoration-none mb-2 w-100'>Add Product</Link>
+                        </ListItem>
+                        <ListItem button className=''>
+                            <Link to={`${url}/manageAllProducts`} className='text-white text-decoration-none mb-2 w-100'>Manage Products</Link>
+                        </ListItem>
+                        <ListItem button className=''>
+                            <Link to={`${url}/makeAdmin`} className='text-white text-decoration-none mb-2 w-100'>Make Admin</Link>
+                        </ListItem>
+                        
                     </Box>
                     :
                     <Box>
-                        <Link to={`${url}/myOrders`}><Button color="inherit" className="w-100 text-white text-decoration-none py-2 mb-2">My Orders</Button></Link>
-                        <Link to={`${url}/userReview`}><Button color="inherit" className="w-100 text-white text-decoration-none py-2 mb-2">Review</Button></Link>
+                        <ListItem button className='btn-hover'>
+                            <Link to={`${url}/myOrders`} className='text-white text-decoration-none mb-2 w-100'>My Orders</Link>
+                        </ListItem>
+                        <ListItem button className='btn-hover'>
+                            <Link to={`${url}/userReview`} className='text-white text-decoration-none mb-2 w-100'>Review</Link>
+                        </ListItem>
                     </Box>
             }
             <Link to="/home"><button onClick={logout} className="btn btn-success w-100">LogOut</button></Link>
