@@ -1,17 +1,18 @@
 import React from 'react';
+import './Footer.css'
 
 const Footer = () => {
     return (
 
         <div className="py-3"
-            style={{ backgroundColor: "#1E3741" }}>
-            <div className="container text-light">
+            style={{ backgroundColor: "#653DF5" }}>
+            <div className="container text-color">
                 
                 <div className="row mt-4">
                     <div className="col-md-4">
                         <div className="text-start">
-                        <h1 style={{ color: "#229954" }}>Shaven</h1>
-                            <p><span className="fas fa-map-marker-alt"></span> G5 Technology JSC, Room 1101, Glory Palace Apartment, Truong Thi Ward, Vinh City, Nghe An Province, VietNam(42000).</p>
+                        <h1 style={{ color: "white" }}>Jewellery</h1>
+                            <p><span className="fas fa-map-marker-alt"></span> G5 Technology JSC, Room 1101, Glory Palace <br/> Apartment, Truong Thi Ward, Vinh City, <br/> Nghe An Province, VietNam(42000).</p>
                             <p><i className="fas fa-phone-alt"></i> (+84) 388-969-888</p>
                             <p><i className="fas fa-envelope-open-text"></i> g5plus@outlook.com</p>
                         </div>
@@ -35,7 +36,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <hr />
-                <p className='text-center'>Made by : <a style={{ textDecoration: "none" }} href="https://www.facebook.com/ih75754/">Md. Ibrahim Hossaim</a> </p>
+                <p className='text-center'>Made by : <a style={{ textDecoration: "none", color :"white" }} href="https://www.facebook.com/ih75754/">Md. Ibrahim Hossaim</a> </p>
             </div>
         </div>
     )

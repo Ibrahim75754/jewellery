@@ -11,11 +11,11 @@ const Header = () => {
     }
     return (
         <div className="text-start" style={{ marginBottom: '70px' }}>
-            <nav className="navbar navbar-expand-lg navbar-light fixed-top" style={{ backgroundColor: "#1E3741" }}>
+            <nav className="navbar navbar-expand-lg navbar-light fixed-top py-3" style={{ backgroundColor: "#653DF5" }}>
                 <div className="container">
                     <NavLink className="navbar-brand" to="/">
                         {/* <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" className="d-inline-block align-text-top" /> */}
-                        <h1 className="text-bold d-inline me-5" style={{ color: "#229954" }}>Shaven</h1>
+                        <h1 className="text-bold d-inline me-5" style={{ color: "white" }}>Jewellery</h1>
                     </NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
