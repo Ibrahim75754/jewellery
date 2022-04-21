@@ -8,8 +8,8 @@ import client6 from '../../../img/client/client6.png';
 
 const Partnar = () => {
     return (
-        <div className="py-5" style={{ backgroundColor: "#d4c6d8" }}>
-            <h1 className="text-color">Our Honorable Partner</h1>
+        <div className="py-5" style={{ backgroundColor: "" }}>
+            <h1 className="">Our Honorable Partner</h1>
             <div className="my-5">
                 <img src={client1} alt="" />
                 <img src={client2} alt="" />

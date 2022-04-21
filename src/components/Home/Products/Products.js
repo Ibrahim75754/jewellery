@@ -6,7 +6,7 @@ import './Prosucts.css'
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://agile-everglades-07523.herokuapp.com/products')
+        fetch('https://quiet-fortress-81213.herokuapp.com/products')
             .then(res => res.json())
             .then(data =>
                 setProducts(data));
@@ -14,14 +14,14 @@ const Products = () => {
 
     return (
         <div className="container py-5">
-            <h1 className="text-color">Our Popular Products</h1>
-            <p className="pb-3">Deep Impact Shaving Foam.Enriched with Black Carbon, it prepares your skin for a comfortable shave and provides a smooth razor glide, giving you a clean skin feeling to make a deep impact! Deep Impact Shaving Foam.</p>
+            <h1 className="">Our Popular Products</h1>
+            <p className="pb-3">Jewellery is one of the oldest types of archaeological artefact – with 100,000-year-old beads made from Nassarius shells thought to be the oldest.</p>
             <div className="row row-cols-1 row-cols-md-3 g-4">
                 {
                     products.slice(0, 6).map(product => <div className="col text-start">
                         <div className="card h-100 border-0 card-custom">
                             <div className="card-img">
-                                <img src={`data:image/png;base64,${product.img}`} className="card-img-top img-height p-3" alt="..." />
+                                <img src={product.img} className="card-img-top img-height p-3" alt="..." />
                             </div>
                             <div className="card-body">
                                 <h5 className="card-title">{product.name}</h5>
