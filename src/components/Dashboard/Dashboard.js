@@ -45,7 +45,7 @@ function Dashboard(props) {
     const drawer = (
         <div style={{ backgroundColor: "#653DF5", height: "100vh", color: "white" }}>
             <Toolbar >
-                <h1 className="text-bold d-inline" style={{ color: "white", marginTop: "30px" }}>Jewellery</h1>
+                <h1 className="text-bold d-inline custom-font" style={{marginTop: "30px" }}>Jewellery</h1>
             </Toolbar>
 
             <ListItem button className='mt-3'>
@@ -80,7 +80,7 @@ function Dashboard(props) {
                         </ListItem>
                     </Box>
             }
-            <Link to="/home"><button onClick={logout} className="btn btn-success w-100">LogOut</button></Link>
+            <Link to="/home"><button onClick={logout} className="btn btn-color w-100">LogOut</button></Link>
         </div>
     );
 

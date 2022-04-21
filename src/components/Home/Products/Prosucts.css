@@ -1,15 +1,17 @@
 .img-height{
     max-height: 300px;
 }
-.btn-purchase{
-    background-color:#229954;
+.btn-color3{
+    background:#FF32A7;
     color: azure;
+    padding: 10px 30px;
 }
-.btn-purchase:hover{
-    color: rgb(210, 226, 210);
+.btn-color3:hover{
+    background:#653DF5;
+    color: #FF32A7;
 }
 .text-color{
-    color: #006885;
+    color: #653DF5;
 }
 .card-custom:hover .card-img img{
     transform: scale(1.2);

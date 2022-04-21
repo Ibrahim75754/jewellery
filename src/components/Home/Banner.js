@@ -19,7 +19,7 @@ const Banner = () => {
                         <div class="carousel-caption d-none d-md-block caption-position">
                             <h2 className="font-style">BEAUTY ____That Impress____</h2>
                             <p>Enhance your beauty with our jewellery that is both spectacular and affordable.</p>
-                            <button className="btn btn-purchase">Explore</button>
+                            <button className="btn btn-color2">Explore</button>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
@@ -27,7 +27,7 @@ const Banner = () => {
                         <div class="carousel-caption d-none d-md-block caption-position text-light">
                             <h2 className="">JEWELLERY ___That You'll Love___</h2>
                             <p>We provide at Olimp,you will surely find even the rarest jewellery.</p>
-                            <button className=" btn btn-purchase">Explore</button>
+                            <button className=" btn btn-color2">Explore</button>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -35,7 +35,7 @@ const Banner = () => {
                         <div class="carousel-caption d-none d-md-block caption-position text-light">
                             <h2 className="font-style">LOVE ___With New Collection___</h2>
                             <p>Your Choice Is Our Best Collection.Purchase The Best jewellery Thats You Love.</p>
-                            <button className="btn btn-purchase">Explore</button>
+                            <button className="btn btn-color2">Explore</button>
                         </div>
                     </div>
                 </div>

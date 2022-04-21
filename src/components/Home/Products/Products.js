@@ -27,8 +27,8 @@ const Products = () => {
                                 <h5 className="card-title">{product.name}</h5>
                                 <p className="card-text">{product.description.split(' ').slice(0, 20).toString().replace(/,/g, ' ')}...</p>
                                 <div className="d-flex justify-content-between">
-                                    <h4 style={{ color: "#006885" }}>{product.price} BDT</h4>
-                                    <Link to={`/home/${product._id}`}><button className='btn btn-purchase'>Purchase</button></Link>
+                                    <h4 className='text-color'>{product.price} BDT</h4>
+                                    <Link to={`/home/${product._id}`}><button className='btn btn-color3'>Purchase</button></Link>
                                 </div>
                             </div>
                         </div>

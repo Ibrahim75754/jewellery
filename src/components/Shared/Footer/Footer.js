@@ -6,12 +6,12 @@ const Footer = () => {
 
         <div className="py-3"
             style={{ backgroundColor: "#653DF5" }}>
-            <div className="container text-color">
+            <div className="container title-color">
                 
                 <div className="row mt-4">
                     <div className="col-md-4">
                         <div className="text-start">
-                        <h1 style={{ color: "white" }}>Jewellery</h1>
+                        <h1 className='custom-font mb-3'>Jewellery</h1>
                             <p><span className="fas fa-map-marker-alt"></span> G5 Technology JSC, Room 1101, Glory Palace <br/> Apartment, Truong Thi Ward, Vinh City, <br/> Nghe An Province, VietNam(42000).</p>
                             <p><i className="fas fa-phone-alt"></i> (+84) 388-969-888</p>
                             <p><i className="fas fa-envelope-open-text"></i> g5plus@outlook.com</p>

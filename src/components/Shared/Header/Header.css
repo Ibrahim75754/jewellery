@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.custom-font{
+    font-family: 'Pacifico', cursive;
+    color: #FF32A7;
+}
+
+.btn-color{
+    background: #FF32A7;
+    color: white;
+    padding: 10px 30px;
+    
+}
+.btn-color:hover{
+    background: white;
+    color: #FF32A7;
+    
+}
+.btn-color2{
+    background: #FF32A7;
+    color: white;
+    padding: 15px 80px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+.btn-color2:hover{
+    background: white;
+    color: #FF32A7;
+}
