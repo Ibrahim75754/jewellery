@@ -1,0 +1,23 @@
+.img-height{
+    max-height: 300px;
+}
+.btn-purchase{
+    background-color:#229954;
+    color: azure;
+}
+.btn-purchase:hover{
+    color: rgb(210, 226, 210);
+}
+.text-color{
+    color: #006885;
+}
+.card-custom:hover .card-img img{
+    transform: scale(1.2);
+    
+}
+.card-img img{
+    transition: transform 1s;
+}
+.card-custom{
+    overflow: hidden;
+}
