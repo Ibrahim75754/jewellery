@@ -15,7 +15,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
-import { Button } from '@mui/material';
+import { Button, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import DashboradHome from './DashbosrdHome/DashboradHome';
 
 import MyOrders from './UserDashboard/MyOrders/MyOrders';
@@ -28,7 +28,7 @@ import ManageAllProducts from './AdminDashboard/ManageAllProducts/ManageAllProdu
 import AdminRoute from '../Login/AdminRoute/AdminRoute';
 import ProductsUpdate from './AdminDashboard/ManageAllProducts/ProductsUpdate';
 
-const drawerWidth = 220;
+const drawerWidth = 250;
 
 function Dashboard(props) {
     const { admin, logout } = useAuth();
@@ -42,11 +42,20 @@ function Dashboard(props) {
     };
 
     const drawer = (
-        <div style={{ backgroundColor: "#006885", height: "100vh", color: "white" }}>
+        <div style={{ backgroundColor: "#653DF5", height: "100vh", color: "white" }}>
             <Toolbar >
-                <h1 className="text-bold d-inline" style={{ color: "#229954" }}>Shaven</h1>
+                <h1 className="text-bold d-inline" style={{ color: "white",marginTop:"30px" }}>Jewellery</h1>
             </Toolbar>
-            <Divider />
+            
+            <List>
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem button key={text}>
+            
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
             <Link to="/home"><Button color="inherit" className="w-100 text-white text-decoration-none py-2 mb-2">Home</Button></Link>
 
             {
@@ -76,7 +85,7 @@ function Dashboard(props) {
                 position="fixed"
                 sx={{
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
-                    ml: { sm: `${drawerWidth}px` }, backgroundColor: "#006885"
+                    ml: { sm: `${drawerWidth}px` }, backgroundColor: "#653DF5"
                 }}
             >
                 <Toolbar>
