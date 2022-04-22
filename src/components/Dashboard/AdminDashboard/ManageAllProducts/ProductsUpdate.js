@@ -16,24 +16,24 @@ const ProductsUpdate = () => {
 
     const chaneImg = e => {
         const updateImg = e.target.value;
-        const update = { img: updateImg, name: product.name, price: product.price, duration: product.duration };
+        const update = { img: updateImg, name: product.name, price: product.price, description: product.description };
         setProduct(update);
     }
 
     const chaneName = e => {
         const updateName = e.target.value;
-        const update = { name: updateName, description: product.description, price: product.price };
+        const update = { name: updateName, img:product.img, description: product.description, price: product.price };
         setProduct(update);
 
     }
     const chaneDes = e => {
         const updatedes = e.target.value;
-        const update = { name: product.name, description: updatedes, price: product.price };
+        const update = { name: product.name,img:product.img, description: updatedes, price: product.price };
         setProduct(update);
     }
     const chanePrice = e => {
         const updatePrice = e.target.value;
-        const update = { name: product.name, description: product.description, price: updatePrice };
+        const update = { name: product.name,img:product.img, description: product.description, price: updatePrice };
         setProduct(update);
     }
 
