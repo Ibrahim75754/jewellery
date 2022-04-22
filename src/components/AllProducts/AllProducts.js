@@ -6,7 +6,7 @@ import Footer from '../Shared/Footer/Footer';
 const AllProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://quiet-fortress-81213.herokuapp.com/products')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data =>
                 setProducts(data));

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ManageAllProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://agile-everglades-07523.herokuapp.com/products')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
@@ -13,7 +13,7 @@ const ManageAllProducts = () => {
     const handleDelete = id => {
         const areUsure = window.confirm('Are You Sure, Want To Delete?');
         if (areUsure) {
-            fetch(`https://agile-everglades-07523.herokuapp.com/products/${id}`, {
+            fetch(`http://localhost:5000/products/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -46,7 +46,7 @@ const ManageAllProducts = () => {
                         {
                             products.map(product => <tr>
                                 <th scope="row">{id++}</th>
-                                <td><img style={{ width: "100px", height: "100px" }} src={`data:image/png;base64,${product.img}`} alt="" /></td>
+                                <td><img style={{ width: "100px", height: "100px" }} src={product.img} alt="" /></td>
                                 <td>{product.name}</td>
                                 <td>{product.description}</td>
                                 <td>{product.price} BDT</td>
