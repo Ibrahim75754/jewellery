@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
+import swal from 'sweetalert';
 import useAuth from '../../../../hooks/useAuth';
 
 const UserReview = () => {
@@ -9,11 +10,11 @@ const UserReview = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         // use AXIOS for post into data base
-        axios.post('https://agile-everglades-07523.herokuapp.com/reviews', data)
+        axios.post('http://localhost:5000/reviews', data)
             .then(res => {
                 // console.log(res);
                 if (res.data.insertedId) {
-                    alert('data insert successfully');
+                    swal("Good job!", "Review Done", "success");
                     reset();
                 }
             })

@@ -4,6 +4,7 @@ import './Login.css';
 import icon from './../../img/logo/gmail.png';
 import useAuth from '../../hooks/useAuth';
 
+
 const Login = () => {
     const [loginData, setLoginData] = useState({});
     const { loginUser, signInWithGoogle, authError } = useAuth();
@@ -44,7 +45,7 @@ const Login = () => {
                             </div>
                             <br />
                             <div className="form-group">
-                                <button className="btn btn-outline-success w-100" type="submit">Login</button>
+                                <button className="btn btn-color3 w-100" type="submit">Login</button>
                             </div>
                         </div>
                     </div>
@@ -55,7 +56,7 @@ const Login = () => {
 
                 <p>New User? <Link to="/registration">Registration</Link></p>
                 <div>---------------Login With---------------</div>
-                <button onClick={handleGoogleSignIn} className="btn btn-outline-success mt-3 border w-100"><img src={icon} alt="" height="30" className='me-2' />Google Login</button>
+                <button onClick={handleGoogleSignIn} className="btn btn-color3 mt-3 border w-100"><img src={icon} alt="" height="30" className='me-2' />Google Login</button>
 
 
             </div>

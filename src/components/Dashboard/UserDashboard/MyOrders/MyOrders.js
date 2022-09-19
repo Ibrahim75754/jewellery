@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 import useAuth from '../../../../hooks/useAuth';
 
 const MyOrders = () => {
@@ -7,28 +8,42 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`https://agile-everglades-07523.herokuapp.com/myOrders/${user.email}`)
+        fetch(`http://localhost:5000/myOrders/${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [user.email]);
 
     let Id = 1;
     const handleDelete = id => {
-        const areUsure = window.confirm('Are You Sure, Want To Delete?');
-        if (areUsure) {
-            fetch(`https://agile-everglades-07523.herokuapp.com/orders/${id}`, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    // console.log(data);
-                    if (data.deletedCount) {
-                        alert('Delete Successful');
-                        const remaining = orders.filter(product => product._id !== id);
-                        setOrders(remaining);
-                    }
-                })
-        }
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    fetch(`http://localhost:5000/orders/${id}`, {
+                        method: 'DELETE'
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            if (data.deletedCount) {
+                                swal("Order has been deleted!", {
+                                    icon: "success",
+                                });
+                                const remaining = orders.filter(product => product._id !== id);
+                                setOrders(remaining);
+                            }
+                        })
+
+                }
+                else {
+                    swal("Order is safe!");
+                }
+            });
+
     }
     return (
         <div>

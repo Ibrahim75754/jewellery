@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css'
+import './Footer.css';
 
 const Footer = () => {
     return (
@@ -7,12 +7,12 @@ const Footer = () => {
         <div className="py-3"
             style={{ backgroundColor: "#653DF5" }}>
             <div className="container title-color">
-                
+
                 <div className="row mt-4">
                     <div className="col-md-4">
                         <div className="text-start">
-                        <h1 className='custom-font mb-3'>Jewellery</h1>
-                            <p><span className="fas fa-map-marker-alt"></span> G5 Technology JSC, Room 1101, Glory Palace <br/> Apartment, Truong Thi Ward, Vinh City, <br/> Nghe An Province, VietNam(42000).</p>
+                            <h1 className='custom-font mb-3'>Jewellery</h1>
+                            <p><span className="fas fa-map-marker-alt"></span> G5 Technology JSC, Room 1101, Glory Palace <br /> Apartment, Truong Thi Ward, Vinh City, <br /> Nghe An Province, VietNam(42000).</p>
                             <p><i className="fas fa-phone-alt"></i> (+84) 388-969-888</p>
                             <p><i className="fas fa-envelope-open-text"></i> g5plus@outlook.com</p>
                         </div>
@@ -36,7 +36,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <hr />
-                <p className='text-center'>Made by : <a style={{ textDecoration: "none", color :"white" }} href="https://www.facebook.com/ih75754/">Md. Ibrahim Hossaim</a> </p>
+                <p className='text-center'>Made by : <a style={{ textDecoration: "none", color: "white" }} href="https://www.facebook.com/Mizantizan2020">Md. Mizanur Rahman</a> </p>
             </div>
         </div>
     )

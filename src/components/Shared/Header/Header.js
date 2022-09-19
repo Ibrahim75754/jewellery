@@ -30,21 +30,25 @@ const Header = () => {
                                 <NavLink className="nav-link  text-white" activeStyle={activeStyle} aria-current="page" to="/allProducts">More Products</NavLink>
                             </li>
                             {user?.email && <>
-                              
-                              <li className="nav-item">
-                                <NavLink className="nav-link  text-white" activeStyle={activeStyle} aria-current="page" to="/dashBoard">Dashboard</NavLink>
-                            </li>
+
+                                <li className="nav-item">
+                                    <NavLink className="nav-link  text-white" activeStyle={activeStyle} aria-current="page" to="/dashBoard">Dashboard</NavLink>
+                                </li>
                             </>}
+
                         </ul>
                         {user?.email ?
                             <span className="navbar-text">
                                 <span style={{ color: "#FDF3F4" }}>{user?.displayName}</span>
                                 <img className="rounded-circle ms-2" style={{ width: "40px" }} src={user.photoURL} alt="" />
                                 <button onClick={logout} className="btn btn-color ms-2">LogOut</button>
+
+
                             </span>
+
                             :
                             <span className="navbar-text">
-                                <NavLink className="" aria-current="page" to='/login'><button className="btn btn-success">Login</button></NavLink>
+                                <NavLink className="" aria-current="page" to='/login'><button className="btn btn-color">Login</button></NavLink>
                             </span>
                         }
                     </div>

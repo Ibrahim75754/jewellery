@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Prosucts.css'
+import './Prosucts.css';
 
 
 const Products = () => {
@@ -28,6 +28,7 @@ const Products = () => {
                                 <p className="card-text">{product.description.split(' ').slice(0, 20).toString().replace(/,/g, ' ')}...</p>
                                 <div className="d-flex justify-content-between">
                                     <h4 className='text-color'>{product.price} BDT</h4>
+                                    {/* <button className='btn btn-color3'>Add To Cart</button> */}
                                     <Link to={`/home/${product._id}`}><button className='btn btn-color3'>Purchase</button></Link>
                                 </div>
                             </div>

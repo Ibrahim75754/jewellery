@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const ManageAllProducts = () => {
     const [products, setProducts] = useState([]);
@@ -11,21 +12,36 @@ const ManageAllProducts = () => {
     let id = 1;
 
     const handleDelete = id => {
-        const areUsure = window.confirm('Are You Sure, Want To Delete?');
-        if (areUsure) {
-            fetch(`http://localhost:5000/products/${id}`, {
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+                fetch(`http://localhost:5000/products/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
                     // console.log(data);
                     if (data.deletedCount) {
-                        alert('Delete Successful');
+                        swal("Product has been deleted!", {
+                            icon: "success",
+                          });
                         const remaining = products.filter(product => product._id !== id);
                         setProducts(remaining);
                     }
                 })
-        }
+              
+            } 
+            else {
+              swal("Product is safe!");
+            }
+          });
+       
     }
     return (
         <div>

@@ -2,8 +2,8 @@ import React from 'react';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import Banner from './Banner';
-import Products from './Products/Products';
 import Partnar from './Partnar/Partnar';
+import Products from './Products/Products';
 import Review from './Review/Review';
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <Products></Products>
             <Partnar></Partnar>
-            {/* <Review></Review> */}
+            <Review></Review>
             <Footer></Footer>
         </div>
     );

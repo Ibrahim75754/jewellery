@@ -44,7 +44,7 @@ const Registration = () => {
                             </div>
                             <br />
                             <div className="form-group">
-                                <button className="btn btn-success w-100" type="submit">Registration</button>
+                                <button className="btn btn-color3 w-100" type="submit">Registration</button>
                             </div>
                         </div>
                     </div>
